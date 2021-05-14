@@ -19,11 +19,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trinhtam/editorjs-hyperlink.git"
+    "url": "git+https://github.com/xaos7991/editorjs-target-link.git"
   },
-  "homepage": "https://github.com/trinhtam/editorjs-hyperlink",
+  "homepage": "https://github.com/xaos7991/editorjs-target-link/#readme",
   "bugs": {
-    "url": "https://github.com/trinhtam/editorjs-hyperlink/issues"
+    "url": "https://github.com/xaos7991/editorjs-target-link/issues"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
