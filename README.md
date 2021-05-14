@@ -49,7 +49,9 @@ var editor = EditorJS({
       messages: {
         tools: {
           link: {
-            'Open in new window': 'Открыть ссылку в новом окне'
+            'Open in new window': 'Открыть ссылку в новом окне',
+            Save: 'Сохранить',
+            'Add a link': 'Вставьте ссылку'
           }
         }
       }
