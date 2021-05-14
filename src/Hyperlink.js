@@ -3,7 +3,7 @@ import SelectionUtils from './SelectionUtils'
 import css from './Hyperlink.css'
 
 export default class Hyperlink {
-  static ENTER_KEY = 13
+  ENTER_KEY = 13
 
   constructor ({ data, config, api, readOnly }) {
     this.toolbar = api.toolbar
