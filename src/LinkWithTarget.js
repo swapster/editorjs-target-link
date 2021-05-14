@@ -1,11 +1,10 @@
 import SelectionUtils from './SelectionUtils'
-// eslint-disable-next-line no-unused-vars
-import css from './Hyperlink.css'
+import css from './LinkWithTarget.css'
 
-export default class Hyperlink {
+export default class LinkWithTarget {
   ENTER_KEY = 13
 
-  constructor ({ data, config, api, readOnly }) {
+  constructor ({ config, api }) {
     this.toolbar = api.toolbar
     this.inlineToolbar = api.inlineToolbar
     this.tooltip = api.tooltip
@@ -17,16 +16,16 @@ export default class Hyperlink {
     this.commandUnlink = 'unlink'
 
     this.CSS = {
-      wrapper: 'ce-inline-tool-hyperlink-wrapper',
-      wrapperShowed: 'ce-inline-tool-hyperlink-wrapper--showed',
+      wrapper: 'ce-inline-tool-targetlink-wrapper',
+      wrapperShowed: 'ce-inline-tool-targetlink-wrapper--showed',
       button: 'ce-inline-tool',
       buttonActive: 'ce-inline-tool--active',
       buttonModifier: 'ce-inline-tool--link',
       buttonUnlink: 'ce-inline-tool--unlink',
-      input: 'ce-inline-tool-hyperlink--input',
-      buttonSave: 'ce-inline-tool-hyperlink--button',
-      label: 'ce-inline-tool--label',
-      checkbox: 'ce-inline-tool--checkbox'
+      input: 'ce-inline-tool-targetlink--input',
+      label: 'ce-inline-tool-targetlink--label',
+      checkbox: 'ce-inline-tool-targetlink--checkbox',
+      buttonSave: 'ce-inline-tool-targetlink--button'
     }
 
     this.nodes = {
@@ -75,9 +74,19 @@ export default class Hyperlink {
       }
     })
 
-    // append
+    // Button
+    this.nodes.buttonSave = document.createElement('button')
+    this.nodes.buttonSave.type = 'button'
+    this.nodes.buttonSave.classList.add(this.CSS.buttonSave)
+    this.nodes.buttonSave.innerHTML = this.i18n.t('Save')
+    this.nodes.buttonSave.addEventListener('click', (event) => {
+      this.savePressed(event)
+    })
+
+    // Append
     this.nodes.wrapper.appendChild(this.nodes.input)
     this.nodes.wrapper.appendChild(checkboxLabel)
+    this.nodes.wrapper.appendChild(this.nodes.buttonSave)
 
     return this.nodes.wrapper
   }

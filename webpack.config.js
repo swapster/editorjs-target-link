@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    entry: './src/Hyperlink.js',
+    entry: './src/LinkWithTarget.js',
     module: {
         rules: [
             {
@@ -34,7 +34,7 @@ module.exports = {
         path: path.join(__dirname, '/dist'),
         publicPath: '/',
         filename: 'bundle.js',
-        library: 'Hyperlink',
+        library: 'LinkWithTarget',
         libraryExport: 'default',
         libraryTarget: 'umd'
     }
