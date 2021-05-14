@@ -10,9 +10,6 @@ module.exports = {
                 use: [
                     {
                         loader: 'babel-loader',
-                        query: {
-                            presets: [ '@babel/preset-env' ],
-                        },
                     },
                 ]
             },

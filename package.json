@@ -1,7 +1,7 @@
 {
-  "name": "editorjs-hyperlink",
-  "version": "1.0.6",
-  "description": "Link with target & rel attribute for Editor.js",
+  "name": "editorjs-link-with-target",
+  "version": "1.0.0",
+  "description": "Link with target for Editor.js",
   "main": "./dist/bundle.js",
   "scripts": {
     "build": "webpack --mode production",
@@ -15,7 +15,7 @@
     "editor.js",
     "editorjs"
   ],
-  "author": "TamIT <tam.maris94@gmail.com> (https://tamit.info)",
+  "author": "Chaos7991 <yougodxaos@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
     "@babel/preset-env": "^7.10.2",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.3",
@@ -34,6 +35,5 @@
     "style-loader": "^1.2.1",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3"
-  },
-  "dependencies": {}
+  }
 }
