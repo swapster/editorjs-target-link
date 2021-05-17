@@ -231,6 +231,7 @@ export default class LinkWithTarget {
     }
     if (anchorTag) {
       anchorTag.target = isTargetBlank ? '_blank' : '_self'
+      achorTag.href = link
     }
   }
 
