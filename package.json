@@ -1,6 +1,6 @@
 {
   "name": "editorjs-link-with-target",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Link with target for Editor.js",
   "main": "./dist/bundle.js",
   "scripts": {
