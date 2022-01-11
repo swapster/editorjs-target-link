@@ -60,6 +60,7 @@ export default class LinkWithTarget {
     this.nodes.checkbox = document.createElement('input')
     this.nodes.checkbox.setAttribute('type', 'checkbox')
     this.nodes.checkbox.classList.add(this.CSS.checkbox)
+    this.nodes.checkbox.checked = Boolean(this.config.defaultTargetBlank)
 
     checkboxLabel.appendChild(this.nodes.checkbox)
     checkboxLabel.appendChild(checkboxText)

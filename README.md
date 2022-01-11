@@ -36,7 +36,10 @@ var editor = EditorJS({
     ...
 
     link: {
-      class: Hyperlink
+      class: Hyperlink,
+      config: {
+        defaultTargetBlank: true
+      },
     }
 
     ...
