@@ -1,6 +1,6 @@
 {
   "name": "editorjs-link-with-target",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Link with target for Editor.js",
   "main": "./dist/bundle.js",
   "scripts": {
@@ -15,15 +15,15 @@
     "editor.js",
     "editorjs"
   ],
-  "author": "Chaos7991 <yougodxaos@gmail.com>",
+  "author": "swapster <swapster@yandex-team.ru>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xaos7991/editorjs-target-link.git"
+    "url": "git+https://github.com/swapster/editorjs-target-link.git"
   },
-  "homepage": "https://github.com/xaos7991/editorjs-target-link/#readme",
+  "homepage": "https://github.com/swapster/editorjs-target-link/#readme",
   "bugs": {
-    "url": "https://github.com/xaos7991/editorjs-target-link/issues"
+    "url": "https://github.com/swapster/editorjs-target-link/issues"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
