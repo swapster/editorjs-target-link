@@ -1,5 +1,6 @@
 import SelectionUtils from './SelectionUtils'
 import css from './LinkWithTarget.css'
+import linkIcon from './link.svg'
 
 export default class LinkWithTarget {
   ENTER_KEY = 13
@@ -23,6 +24,7 @@ export default class LinkWithTarget {
       buttonModifier: 'ce-inline-tool--link',
       buttonUnlink: 'ce-inline-tool--unlink',
       input: 'ce-inline-tool-targetlink--input',
+      link: 'ce-inline-tool-targetlink--link',
       label: 'ce-inline-tool-targetlink--label',
       checkbox: 'ce-inline-tool-targetlink--checkbox',
       buttonSave: 'ce-inline-tool-targetlink--button'
@@ -31,6 +33,7 @@ export default class LinkWithTarget {
     this.nodes = {
       wrapper: null,
       input: null,
+      link: null,
       checkbox: null,
       buttonSave: null
     }
@@ -75,6 +78,13 @@ export default class LinkWithTarget {
       }
     })
 
+    // Link
+    this.nodes.link = document.createElement('a')
+    this.nodes.link.title = this.i18n.t('Open a link')
+    this.nodes.link.classList.add(this.CSS.link)
+    this.nodes.link.setAttribute('target', '_blank')
+    this.nodes.link.appendChild(new DOMParser().parseFromString(linkIcon,'image/svg+xml').documentElement)
+
     // Button
     this.nodes.buttonSave = document.createElement('button')
     this.nodes.buttonSave.type = 'button'
@@ -86,6 +96,7 @@ export default class LinkWithTarget {
 
     // Append
     this.nodes.wrapper.appendChild(this.nodes.input)
+    this.nodes.wrapper.appendChild(this.nodes.link)
     this.nodes.wrapper.appendChild(checkboxLabel)
     this.nodes.wrapper.appendChild(this.nodes.buttonSave)
 
@@ -144,6 +155,7 @@ export default class LinkWithTarget {
       const hrefAttr = anchorTag.getAttribute('href')
       const targetAttr = anchorTag.getAttribute('target')
       this.nodes.input.value = hrefAttr || ''
+      this.nodes.link.href = hrefAttr || ''
       this.nodes.checkbox.checked = targetAttr === '_blank'
       this.selection.save()
     } else {
@@ -183,6 +195,7 @@ export default class LinkWithTarget {
     }
     this.nodes.wrapper.classList.remove(this.CSS.wrapperShowed)
     this.nodes.input.value = ''
+    this.nodes.link.href = ''
     this.nodes.checkbox.checked = false
 
     if (clearSavedSelection) {

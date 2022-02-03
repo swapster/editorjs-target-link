@@ -25,9 +25,20 @@
   padding: 5px 8px;
   margin-bottom: 10px;
   outline: none;
-  width: 100%;
+  width: 90%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.ce-inline-tool-targetlink--link {
+  display: inline-block;
+  width: 10%;
+}
+
+.ce-inline-tool-targetlink--link > svg {
+  width: 20px;
+  margin-left: 10px;
+  margin-bottom: 5px;
 }
 
 .ce-inline-tool-targetlink--label {
